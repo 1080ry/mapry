@@ -136,7 +136,7 @@ body{position:absolute;left:0;top:0;width:100%}article,aside,details,figcaption,
 }
 /*サイドバー_____________________________________________*/
 .sidebar {
-  width: 350px;
+  width: 347px;
   height: auto;
   float: left;
 }
@@ -442,13 +442,13 @@ footer {
 }
 /*コンテンツ_____________________________________________*/
 .contents {
-  width: 750px;
+  width: 753px;
   float: right;
   height: auto;
 }
 /*シングルページ_____________________________________________*/
 .single {
-  width: 750px;
+  width: 753px;
   background: #fff;
   position: relative;
   margin: 0 0 50px;
@@ -642,6 +642,7 @@ footer {
   height: 50px;
   background-color: #f8f8f8;
   overflow:hidden;
+  clear: both;
 }
 .next {
   display: block;
@@ -791,12 +792,15 @@ footer {
 }
 .entry-list .entry {
   border-bottom: #ccc 1px solid;
+  border-right: #ccc 1px solid;
   position: relative;
+  height:300px;
+  float:left;
 }
 .entry-list .entry a {
   color: #000;
-  padding: 30px;
-  width: 690px;
+  padding: 40px 20px 20px;
+  width: 210px;
   overflow: hidden;
   display: block;
   text-decoration: none;
@@ -811,39 +815,25 @@ footer {
   background: #d5e0f1;
 }
 .entry-list .entry a .entry-title {
-  width: 425px;
-  float: right;
+  width: 210px;
 }
-.entry-list .entry a .box-timedate {
-  width: 425px;
-  margin: 0 0 10px;
-  overflow: hidden;
-}
-.entry-list .entry a .box-timedate p {
-  font-family: 'Source Sans Pro', sans-serif;
-  color: #3b5a97;
-  -webkit-font-smoothing: antialiased;
-  font-size: 172%;
-  display: block;
-  float: left;
-  margin: 5px 15px 0 0;
-}
+
 .entry-list .entry a .box-thumbnail {
   width: 210px;
-  float: left;
 }
 .entry-list .entry a h1 {
-  font-size: 129%;
+  padding-top: 30px;
+  text-align: center;
+  font-size: 110%;
   font-weight: 700;
   line-height: 150%;
   min-height: 54px;
   overflow: hidden;
-  border-bottom: 1px dotted #3b5a97;
 }
 .entry-list .box-cat{
   z-index: 3;
   position: absolute;
-  top: 30px;
+  top: 5px;
   right: -10px;
   font-size: 79%;
   text-align: center;
@@ -862,23 +852,7 @@ footer {
   right: 0;
   bottom: -5px;
   border-color: #999999 transparent transparent;
-}
-.entry-list .entry a .entry-arrow {
-  position: absolute;
-  z-index: 3;
-  right: 30px;
-  bottom: 33px;
-  filter: alpha(Opacity=20);
-  opacity: .2;
-  -webkit-transition: .3s ease;
-  -moz-transition: .3s ease;
-  -o-transition: .3s ease;
-  transition: .3s ease
-}
-.entry-list .entry a:hover .entry-arrow {
-  right: 20px;
-  filter: alpha(Opacity=100);
-  opacity: 1
+  opacity: 0.5;
 }
 .main-cat{
   background: #3b5a97;
@@ -948,25 +922,4 @@ footer {
 }
 .news {
   background: #cc3333;
-}
-/*zenback_____________________________________________*/
-.box-zenback {
-  background: #fff;
-  -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
-  -moz-box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
-  box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
-  position: relative;
-  padding: 30px;
-  margin: 0!important;
-}
-.box-zenback .icon_arrow {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 22.5px 20px;
-  position: absolute;
-  z-index: 5;
-  left: 327px;
-  top: -20px;
-  border-color: transparent transparent #fff;
 }
