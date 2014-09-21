@@ -1,15 +1,5 @@
 <?php get_header(); ?>
 <?php if ( is_home() || is_front_page() ) : ?>
-<!--　特集記事がある場合このコードを使用
-<div class="special-main">
-<div class="box-special"> <a class="btn" href="#"></a></div>
--->
-
-<!--特集記事がある場合は削除-->
-<div class="main">
-<!--特集記事がある場合は削除-->
-
-<?php else : ?>
 <div class="main">
  <?php endif; ?>
  <div class="main-wrap">
@@ -38,17 +28,7 @@
       </figure>
      </div>
      <div class="entry-title">
-      <div class="box-timedate">
-       <p><?php echo get_post_time('Y.m.d D'); ?></p>
-      </div>
-      <?php
- $cat = get_the_category();
- $cat = $cat[0];
- $category= $cat->cat_name;
- $catslug = $cat->slug;
- ?>
-      <div class="
-<?php
+      <div class="<?php
 $cats = get_the_category();
 $cat = $cats[0];
 if($cat->parent){
@@ -73,19 +53,7 @@ echo $cat->cat_name;
       <h1>
        <?php the_title(); ?>
       </h1>
-      <ul class="sns-count">
-       <li id="socialarea_facebook_<?php echo $post->ID;?>"><i class="fa fa-facebook"></i><span class="count"></span></li>
-       <li id="socialarea_twitter_<?php echo $post->ID;?>"><i class="fa fa-twitter"></i><span class="count"></span></li>
-       <li id="socialarea_hatebu_<?php echo $post->ID;?>">Ｂ!<span class="count"></span></li>
-       <script type="text/javascript">
-$(function(){
-get_social_count_facebook("<?php the_permalink(); ?>", "socialarea_facebook_<?php echo $post->ID;?>");
-get_social_count_twitter("<?php the_permalink(); ?>", "socialarea_twitter_<?php echo $post->ID;?>");
-get_social_count_hatebu("<?php the_permalink(); ?>", "socialarea_hatebu_<?php echo $post->ID;?>");
-});
-</script>
-      </ul>
-      <div class="entry-arrow"><img src="http://1080ry.com/wp-content/themes/1080/img/icon_arrow_l.png" width="18" height="17" alt="icon"></div>
+
      </div>
      </a> </article>
     <?php endwhile; endif; ?>
